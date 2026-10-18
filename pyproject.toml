@@ -1,0 +1,20 @@
+[project]
+name = "travel-mcp"
+version = "0.1.0"
+description = "All-in-one travel MCP server — POI discovery, multi-modal routing, weather, currency, timezone & country info (14 tools)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.27.0",
+    "pydantic>=2.13.3",
+    "python-dotenv>=1.2.2",
+    "timezonefinder>=8.2.4",
+]
+
+[project.scripts]
+travel-mcp = "travel_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.8.10,<0.9.0"]
+build-backend = "uv_build"
